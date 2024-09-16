@@ -9,6 +9,7 @@ import Header from "./components/Header";
 import AdminSlideUpload from "./components/AdminSlideUploader";
 import OrdersPage from "./pages/OrdersPage";
 import DashboardPage from "./pages/DashboardPage";
+import SliderInfo from "./pages/SlidesInfo";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
             <Route path="/orders" element={<OrdersPage/>} />
             <Route path="/users" element={<UsersPage />} />
             <Route path="/slide" element={<AdminSlideUpload/>}/>
+            <Route path="/slide/info" element={<SliderInfo/>}/>
           </Routes>
         </div>
       </div>
