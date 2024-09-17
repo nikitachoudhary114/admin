@@ -12,7 +12,7 @@ function DashboardPage() {
           <No_Of_UsersChart />
         </div>
         <div className="bg-white p-4 shadow rounded">
-          <h3 className="text-lg font-medium mb-4">Products by Category</h3>
+          <h3 className="text-lg font-medium mb-4">Orders by Category</h3>
           <ProductCategoryChart />
         </div>
       </div>
