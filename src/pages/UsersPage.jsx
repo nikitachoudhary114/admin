@@ -25,9 +25,9 @@ function UsersPage() {
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead className="bg-gray-100">
             <tr>
-              <th className="px-4 py-2 text-left text-blue-800">Name</th>
-              <th className="px-4 py-2 text-left text-blue-800">Email</th>
-              <th className="px-4 py-2 text-left text-blue-800">Phone</th>
+              <th className="px-4 py-2 text-left ">Name</th>
+              <th className="px-4 py-2 text-left ">Email</th>
+              <th className="px-4 py-2 text-left ">Phone</th>
             </tr>
           </thead>
           <tbody>

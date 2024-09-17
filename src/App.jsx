@@ -9,6 +9,7 @@ import Header from "./components/Header";
 
 import OrdersPage from "./pages/OrdersPage";
 import DashboardPage from "./pages/DashboardPage";
+import AddProduct from "./pages/AddProduct";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<DashboardPage/>} />
             <Route path="/products" element={<ProductsPage />} />
+            <Route path="/add" element={<AddProduct/> } />
             <Route path="/orders" element={<OrdersPage/>} />
             <Route path="/users" element={<UsersPage />} />
           </Routes>
