@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import {
   BarChart,
   Bar,
@@ -10,26 +11,47 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const data = [
-  { category: "Electronics", products: 120 },
-  { category: "Clothing", products: 98 },
-  { category: "Home Appliances", products: 65 },
-  { category: "Books", products: 78 },
-  { category: "Toys", products: 90 },
-  { category: "Sports", products: 85 },
-];
+// const data = [
+//   { category: "Electronics", products: 120 },
+//   { category: "Clothing", products: 98 },
+//   { category: "Home Appliances", products: 65 },
+//   { category: "Books", products: 78 },
+//   { category: "Toys", products: 90 },
+//   { category: "Sports", products: 85 },
+// ];
 
 function ProductCategoryChart() {
+  useEffect(() => {
+    // Fetch orders when component loads
+    const fetchOrders = async () => {
+      try {
+        const data = await axios.get(
+          "http://localhost:3000/api/v1/admin/dashBoardAllOrders"
+        );
+        data.data.forEach(element => {
+          // console.log(element.orders);
+          element.orders.forEach(secElement => {
+            secElement.items[0].items.forEach(thirdElement=>{
+              console.log(thirdElement.productId.category);
+            })
+          });
+        });
+      } catch (error) {
+        console.error("Error fetching orders", error);
+      }
+    };
+    fetchOrders();
+  }, []);
   return (
     <ResponsiveContainer width="100%" height={300}>
-      <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+      {/* <BarChart data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis dataKey="category" />
         <YAxis />
         <Tooltip />
         <Legend />
         <Bar dataKey="products" fill="#82ca9d" />
-      </BarChart>
+      </BarChart> */}
     </ResponsiveContainer>
   );
 }
