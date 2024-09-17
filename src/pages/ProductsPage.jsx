@@ -1,13 +1,13 @@
 import React from 'react';
 import ProductList from '../components/ProductList';
-import ProductForm from '../components/ProductForm';
 
 
 function ProductsPage() {
   return (
     <div className="p-6">
-      <h2 className="text-2xl font-semibold mb-4">Products</h2>
-      <ProductForm/>
+      <h1 className="text-2xl font-bold mb-4 text-center">
+        All Product's
+      </h1>
       <ProductList />
     </div>
   );

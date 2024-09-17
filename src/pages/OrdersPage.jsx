@@ -51,7 +51,9 @@ const OrdersPage = () => {
 
   return (
     <div className="adminOrders p-6">
-      <h1 className="text-2xl font-bold mb-4">Orders Management</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center">
+        All Order's
+      </h1>
       <div className="overflow-x-auto">
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead className="bg-gray-100">
